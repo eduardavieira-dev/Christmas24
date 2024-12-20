@@ -1,37 +1,37 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-:root{
+
+:root {
     --header-height: 3rem;
-    
+
     /* ===Colors=== */
-    --first-color: #DA2535;
-    --first-color-alt: #C42130;
-    --first-color-send: #DE3B49;
-    --second-color:#88b64d;
+    --first-color: #da2535;
+    --first-color-alt: #c42130;
+    --first-color-send: #de3b49;
+    --second-color: #88b64d;
     --title-color: #161212;
-    --text-color: #5B5757;
-    --body-color: #FEFBFB;
-    --container-color: #FFF;
+    --text-color: #5b5757;
+    --body-color: #fefbfb;
+    --container-color: #fff;
 
     /* ===Font & typography=== */
-    --body-font-poppins: "Poppins", serif;
-    --body-font-quicksand: "Quicksand", serif;
-    --body-font-inter: "Inter", serif;
+    --body-font-poppins: 'Poppins', serif;
+    --body-font-quicksand: 'Quicksand', serif;
+    --body-font-inter: 'Inter', serif;
     --biggest-font-size: 2rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1.125rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
 
     /* ===Font weight=== */
     --font-semi-bold: 600;
     --font-bold: 700;
-    
+
     /*===Margens=== */
-    --mb-1: .5rem;
+    --mb-1: 0.5rem;
     --mb-2: 1rem;
     --mb-3: 1.5rem;
     --mb-4: 2rem;
@@ -41,41 +41,40 @@
     /* ===z index=== */
     --z-tooltip: 10;
     --z-fixed: 100;
-
 }
 
-@media screen and(min-width: 968px){
-    :root{
+@media screen and(min-width: 968px) {
+    :root {
         --biggest-font-size: 3rem;
         --h2-font-size: 1.75rem;
         --h3-font-size: 1.25rem;
         --normal-font-size: 1rem;
-        --small-font-size: .875rem;
+        --small-font-size: 0.875rem;
     }
 }
 
 /* ===Base=== */
-*, ::before, ::after{
+*,
+::before,
+::after {
     box-sizing: border-box;
-
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-
 /* ===Variables Dark theme=== */
-body.dark-theme{
+body.dark-theme {
     --first-color-send: #161212;
-    --title-color: #F3F1F1;
-    --text-color: #D1C7C8;
-    --body-color: #251D1E;
+    --title-color: #f3f1f1;
+    --text-color: #d1c7c8;
+    --body-color: #251d1e;
     --container-color: #302728;
-  }
+}
 
 /* ===Button Dark/Light=== */
-.change-theme{
+.change-theme {
     position: absolute;
     right: 1.5rem;
     top: 2.2rem;
@@ -83,10 +82,9 @@ body.dark-theme{
     color: var(--title-color);
     font-size: 2rem;
     cursor: pointer;
-  }
+}
 
-
-body{
+body {
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font-poppins);
     font-size: var(--normal-font-size);
@@ -95,60 +93,64 @@ body{
     line-height: 1.6;
 }
 
-h1,h2,h3,ul,p{
+h1,
+h2,
+h3,
+ul,
+p {
     margin: 0;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     font-weight: var(--font-semi-bold);
     color: var(--title-color);
 }
 
-ul{
+ul {
     padding: 0;
     list-style: none;
 }
-a{
+a {
     text-decoration: none;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 /* === Class CSS=== */
-.section{
+.section {
     padding: 4rem 0 2rem;
 }
 
-.section-title .section-title-center{
+.section-title .section-title-center {
     font-size: var(--h2-font-size);
     color: var(--title-color);
     text-align: center;
     margin-bottom: var(--mb-3);
 }
 
-
 /* ===Layout=== */
 
-.l-main{
+.l-main {
     overflow: hidden;
 }
 
-
-.bd-container{
+.bd-container {
     max-width: 968px;
     width: calc(100% - 3rem);
     margin-left: var(--mb-3);
     margin-right: var(--mb-3);
-  }
-
-.bg-grid{
-    display: grid;
-    gap: 1.5rem ;
 }
 
-.l-header{
+.bg-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.l-header {
     width: 100%;
     position: fixed;
     top: 0;
@@ -157,17 +159,16 @@ img{
     background-color: var(--body-color);
 }
 
-
 /* ===Nav=== */
-.nav{
+.nav {
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-@media screen and (max-width: 768px){
-    .nav__menu{
+@media screen and (max-width: 768px) {
+    .nav__menu {
         position: fixed;
         top: -100%;
         left: 0;
@@ -177,96 +178,92 @@ img{
         padding: 2.5rem 0 0;
         text-align: center;
         background-color: var(--body-color);
-        transition: .4s;
-        box-shadow: 0 0 4px rgba(0,0,0,.1);
+        transition: 0.4s;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
         border-radius: 2rem;
         z-index: var(--z-fixed);
     }
 }
 
-
-.nav__item{
+.nav__item {
     margin-bottom: var(--mb-3);
 }
 
-.nav__link, .nav__logo, .nav__toggle{
+.nav__link,
+.nav__logo,
+.nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
 }
 
-.nav__logo:hover, .nav__link:hover{
+.nav__logo:hover,
+.nav__link:hover {
     color: var(--first-color);
 }
 
-.nav__link{
-    transition: .3s;
+.nav__link {
+    transition: 0.3s;
 }
 
-
-.nav__toggle{
+.nav__toggle {
     font-size: 1.3rem;
     cursor: pointer;
 }
 /* Show menu */
-.show-menu{
+.show-menu {
     top: calc(var(--header-height) + 1rem);
-  }
-  
- 
-  /* Active menu link */
-  .active-link{
+}
+
+/* Active menu link */
+.active-link {
     position: relative;
-  }
-  
-  .active-link::before{
+}
+
+.active-link::before {
     content: '';
     position: absolute;
-    bottom: -.75rem;
+    bottom: -0.75rem;
     left: 45%;
     width: 5px;
     height: 5px;
     background-color: var(--first-color);
     border-radius: 50%;
-  }
-  
+}
 
 /* Change background header */
-.scroll-header{
-    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+.scroll-header {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Scroll top */
-.scrolltop{
+.scrolltop {
     position: fixed;
     right: 1rem;
     bottom: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .3rem;
-    background: rgba(218, 27, 53, .5);
+    padding: 0.3rem;
+    background: rgba(218, 27, 53, 0.5);
     color: var(--body-color);
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     z-index: var(--z-tooltip);
-    transition: .4s;
+    transition: 0.4s;
     /* visibility: hidden; */
 }
 
-.scrolltop:hover{
+.scrolltop:hover {
     background-color: var(--first-color);
-  }
-  
-  .scrolltop__icon{
+}
+
+.scrolltop__icon {
     font-size: 1.25rem;
     color: var(--body-color);
-  }
-  
-  .show-scroll{
+}
+
+.show-scroll {
     visibility: visible;
     bottom: 1.5rem;
-  }
+}
 
 /* ===Home==== */
-
-
- 
