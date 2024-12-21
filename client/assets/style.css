@@ -283,7 +283,10 @@ img {
     margin-bottom: var(--mb-3);
   }
   
-
+h2{
+    padding: 10px 0;
+    text-align: center;
+}
 /*==== BUTTONS ====*/
 .button{
     display: inline-block;
@@ -313,7 +316,7 @@ img {
 
   /*========== SHARE ==========*/
 .share__data{
-    text-align: center;
+    /* text-align: center; */
   }
   
   .share__description{
