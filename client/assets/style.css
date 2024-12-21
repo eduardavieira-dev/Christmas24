@@ -307,19 +307,40 @@ h2{
   
 
   /*========== jesus ==========*/
-.jesus__data{
-    /* text-align: center; */
-  }
+/*========== jesus ==========*/
+.jesus__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para telas maiores */
+    gap: 2rem; /* Espaçamento entre os elementos */
+    align-items: center;
+    padding: 2rem 1rem; /* Adiciona espaçamento interno */
+}
+
+.jesus-title {
+    text-align: start; /* Alinha o título à esquerda */
+    font-size: var(--h2-font-size);
   
-  .jesus__description{
+}
+
+.jesus__description {
     margin-bottom: var(--mb-2);
-  }
-  
-  .jesus-img{
-    width: 350px;
+    line-height: 1.8; /* Melhora a legibilidade */
+    color: #333; /* Torna o texto mais legível */
+    text-align: justify;
+}
+
+.jesus-img {
+    width: 100%; /* Ajusta para ocupar o espaço disponível */
+    max-width: 400px; /* Limita o tamanho máximo da imagem */
     justify-self: center;
-  }
-  
+}
+
+.jesus__img img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
 /*========== natal ==========*/
 .natal__title{
     text-align: center;
@@ -434,10 +455,10 @@ h2{
   
   .send__title, .send__description{
     color: #fff;
+    text-align: initial;
   }
   
   .send__description{
-    text-align: center;
     margin-bottom: var(--mb-4);
   }
   
@@ -468,48 +489,7 @@ h2{
   }
   
   /*========== FOOTER ==========*/
-  .footer__container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem; /* Adiciona espaçamento entre os cards */
-    justify-content: center;
-    /* align-items: center; */
-  }
   
-  .footer__logo{
-    color: var(--title-color);
-  }
-  
-  .footer__title{
-    margin-bottom: var(--mb-2);
-  }
-  
-  .footer__logo, .footer__title{
-    font-size: var(--h3-font-size);
-  }
-  
-  .footer__link{
-    display: inline-block;
-    margin-bottom: .75rem;
-    color: var(--text-color);
-  }
-  
-  .footer__link:hover{
-    color: var(--first-color);
-  }
-  
-  .footer__social{
-    font-size: 1.5rem;
-    color: var(--title-color);
-    margin-right: var(--mb-3);
-  }
-  
-  .footer__social:hover{
-    transition: .4s;
-    color: var(--first-color);
-  }
-  
-
 
   .footer__copy{
     text-align: center;
@@ -588,7 +568,7 @@ h2{
       }
 }
 @media (max-width: 568px) {
-    .natal__container,.footer__container ,.send__container{
+    .natal__container,.footer__container ,.send__container, .jesus__container{
         grid-template-columns:  1fr; 
     }
     .send__container img{
@@ -636,6 +616,7 @@ h2{
   
     .jesus__container{
       padding: 0 2rem;
+      
     }
   
     .desejos__container{
@@ -666,7 +647,7 @@ h2{
   
     .send__container{
       background-color: var(--first-color-send);
-      padding: 2rem;
+      padding: 2rem 2.6rem;
       border-radius: 1.5rem;
     }
   }
@@ -689,7 +670,7 @@ h2{
       column-gap: 5rem;
     }
     .section-title-center, .jesus__description{
-        text-align: center;
+        text-align: initial;
     }
     .natal__title-h3 {
         font-size: 25px;
