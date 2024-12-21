@@ -245,21 +245,32 @@ img {
 
 
 /* ===Home==== */
-.home__conatiner{
-    row-gap: .5rem;
+.home__container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem; 
+    padding: 2rem 1rem; 
 }
 
-.home-img{
-    width: 320px;
-    justify-self: center;
+.home-img {
+    width: 100%;
+    max-width: 400px; 
+    justify-self: center; 
 }
 
-.home__title{
+.home__img img {
+    width: 100%; 
+    height: auto; 
+}
+
+.home__title {
     font-size: var(--biggest-font-size);
     font-weight: var(--font-bold);
     margin-bottom: var(--mb-2);
-  }
-  
+
+}
+
   .home__description{
     margin-bottom: var(--mb-3);
   }
@@ -554,6 +565,12 @@ h2{
   
   /* Estilizando para telas menores */
 @media (max-width: 768px) {
+    .home__container {
+        grid-template-columns: 1fr;
+    }
+    .home__img{
+        order: -1;
+      }
     .natal__container, .footer__container {
         grid-template-columns: 1fr 1fr; 
     }
