@@ -63,25 +63,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ===Variables Dark theme=== */
-body.dark-theme {
-    --first-color-send: #161212;
-    --title-color: #f3f1f1;
-    --text-color: #d1c7c8;
-    --body-color: #251d1e;
-    --container-color: #302728;
-}
-
-/* ===Button Dark/Light=== */
-.change-theme {
-    position: absolute;
-    right: 1.5rem;
-    top: 2.2rem;
-    display: flex;
-    color: var(--title-color);
-    font-size: 2rem;
-    cursor: pointer;
-}
 
 body {
     margin: var(--header-height) 0 0 0;
@@ -314,26 +295,26 @@ h2{
   }
   
 
-  /*========== SHARE ==========*/
-.share__data{
+  /*========== jesus ==========*/
+.jesus__data{
     /* text-align: center; */
   }
   
-  .share__description{
+  .jesus__description{
     margin-bottom: var(--mb-2);
   }
   
-  .share-img{
+  .jesus-img{
     width: 350px;
     justify-self: center;
   }
   
-/*========== DECORATION ==========*/
-.decoration__title{
+/*========== natal ==========*/
+.natal__title{
     text-align: center;
 }
 
-.decoration__container {
+.natal__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem; /* Adiciona espaçamento entre os cards */
@@ -341,7 +322,7 @@ h2{
     align-items: center;
 }
 
-.decoration__data {
+.natal__data {
     text-align: center;
     padding: 1rem 1rem 2rem;
     background-color: var(--container-color);
@@ -349,11 +330,11 @@ h2{
     border-radius: 1rem;
 }
 
-.decoration__data:hover {
+.natal__data:hover {
     box-shadow: 0 3px 12px rgba(65, 11, 16, .15);
 }
 
-.decoration__img {
+.natal__img {
     width: 170px;
     padding-bottom: 10px;
 }
@@ -369,17 +350,22 @@ h2{
     padding-top: 15px;
 }
 
-.decoration__title {
+.natal__title {
     font-size: var(--h3-font-size);
     margin-bottom: var(--mb-1);
 }
-  /*========== ACCESSORIES ==========*/
-  .accessory__container{
-    grid-template-columns: repeat(2,1fr);
+ 
+/*========== DESEJOS ==========*/
+.desejos__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem; /* Adiciona espaçamento entre os cards */
+    justify-content: center;
+    /* align-items: center; */
     padding-bottom: 2rem;
   }
   
-  .accessory__content{
+  .desejos__content{
     position: relative;
     display: grid;
     padding: .25rem .75rem .75rem;
@@ -388,36 +374,36 @@ h2{
     border-radius: 1rem;
   }
   
-  .accessory__content:hover{
+  .desejos__content:hover{
     box-shadow: 0 3px 12px rgba(65,11,16,.15);
   }
   
-  .accessory__img{
+  .desejos__img{
     width: 110px;
     justify-self: center;
     margin-bottom: .25rem;
   }
   
-  .accessory__title, .accessory__category{
+  .desejos__title, .desejos__category{
     text-align: center;
   }
   
-  .accessory__title{
+  .desejos__title{
     font-size: var(--normal-font-size);
   }
   
-  .accessory__category{
+  .desejos__category{
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-1);
     color: var(--text-color-light);
   }
   
-  .accessory__preci{
+  .desejos__preci{
     font-weight: var(--font-semi-bold);
     color: var(--title-color);
   }
   
-  .accessory__button{
+  .desejos__button{
     position: absolute;
     bottom: 0;
     right: 0;
@@ -427,6 +413,92 @@ h2{
     border-radius: 1rem 0 1rem 0;
   }
   
+  /*========== SEND GIFT ==========*/
+  .send{
+      background-color: var(--first-color-send);
+    }
+    .send__container {
+       display: flex;
+    }
+  
+  .send__title, .send__description{
+    color: #fff;
+  }
+  
+  .send__description{
+    text-align: center;
+    margin-bottom: var(--mb-4);
+  }
+  
+  .send__direction{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: .35rem .5rem;
+    padding-left: 20px;
+    border-radius: .5rem;
+  }
+  
+  .send__input{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+  }
+  
+  .send__input::placeholder{
+    font-family: var(--body-font);
+  }
+  
+  .send__img{
+    width: 280px;
+    justify-self: center;
+  }
+  
+  /*========== FOOTER ==========*/
+  .footer__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem; /* Adiciona espaçamento entre os cards */
+    justify-content: center;
+    /* align-items: center; */
+  }
+  
+  .footer__logo{
+    color: var(--title-color);
+  }
+  
+  .footer__title{
+    margin-bottom: var(--mb-2);
+  }
+  
+  .footer__logo, .footer__title{
+    font-size: var(--h3-font-size);
+  }
+  
+  .footer__link{
+    display: inline-block;
+    margin-bottom: .75rem;
+    color: var(--text-color);
+  }
+  
+  .footer__link:hover{
+    color: var(--first-color);
+  }
+  
+  .footer__social{
+    font-size: 1.5rem;
+    color: var(--title-color);
+    margin-right: var(--mb-3);
+  }
+  
+  .footer__social:hover{
+    transition: .4s;
+    color: var(--first-color);
+  }
+  
+
 
   .footer__copy{
     text-align: center;
@@ -440,15 +512,16 @@ h2{
 /* For full-screen images on small screens */
 @media screen and (max-width: 359px){
     .home__img,
-    .share__img,
+    .jesus__img,
     .send__img{
       width: 100%;
     }
+   
   }
   
   @media screen and (min-width: 576px){
     .home__container,
-    .share__container,
+    .jesus__container,
     .send__container{
       grid-template-columns: repeat(2,1fr);
       align-items: center;
@@ -463,32 +536,48 @@ h2{
     }
   
     .section-title-center,
-    .share__data,
+    .jesus__data,
     .send__description{
       text-align: initial;
     }
   
     .home__img,
-    .share__img,
+    .jesus__img,
     .send__img{
       width: 100%;
     }
     
-    .share__img{
+    .jesus__img{
       order: -1;
     }
   }
   
   /* Estilizando para telas menores */
 @media (max-width: 768px) {
-    .decoration__container {
+    .natal__container, .footer__container {
         grid-template-columns: 1fr 1fr; 
     }
+    .footer__container{
+        grid-template-columns: 1fr;
+      }
+      .send__container {
+        display: block;
+     }
+     .send__container img{
+        width: 70%;
+     }
+     .footer__copy{   
+        padding: 0 1.5rem;
+      }
 }
 @media (max-width: 568px) {
-    .decoration__container {
+    .natal__container,.footer__container ,.send__container{
         grid-template-columns:  1fr; 
     }
+    .send__container img{
+        width: 100%;
+    }
+    
 }
 
 
@@ -528,29 +617,29 @@ h2{
       padding: 7rem 2rem 0;
     }
   
-    .share__container{
+    .jesus__container{
       padding: 0 2rem;
     }
   
-    .accessory__container{
+    .desejos__container{
       grid-template-columns: repeat(3,224px);
       justify-content: center;
     }
   
-    .accessory__content{
+    .desejos__content{
       padding: .5rem 1.5rem 1.5rem;
     }
   
-    .accessory__img{
+    .desejos__img{
       width: 120px;
       margin-bottom: var(--mb-1);
     }
   
-    .accessory__title, .accessory__category{
+    .desejos__title, .desejos__category{
       text-align: initial;
     }
   
-    .accessory__button{
+    .desejos__button{
       padding: .75rem;
     }
   
@@ -572,20 +661,20 @@ h2{
     }
   
     .home__img,
-    .share__img,
+    .jesus__img,
     .send__img{
       width: 469px;
     }
   
     .home__container,
-    .share__container,
+    .jesus__container,
     .send__container{
       column-gap: 5rem;
     }
-    .section-title-center, .share__description{
+    .section-title-center, .jesus__description{
         text-align: center;
     }
-    .decoration__title-h3 {
+    .natal__title-h3 {
         font-size: 25px;
         text-align: center;
         margin-bottom: var(--mb-3);
