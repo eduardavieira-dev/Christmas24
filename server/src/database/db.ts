@@ -3,11 +3,13 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const connectDatabase = () => {
+export const connectDatabase = async (): Promise<void> => {
     console.log('Wait connecting to the database');
-
-    mongoose
-        .connect(`${process.env.DATABASE_URL}`)
-        .then(() => console.log('MongoDB Atlas Connected'))
-        .catch((error: Error) => console.log(error));
+    try {
+        await mongoose.connect(`${process.env.DATABASE_URL}`);
+        console.log('MongoDB Atlas Connected');
+    } catch (error) {
+        console.error('Error connecting to the database:', error);
+        throw new Error('Failed to connect to the database');
+    }
 };
