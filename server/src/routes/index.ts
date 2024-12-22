@@ -1,8 +1,10 @@
 import express from 'express';
-import { indexController } from '../controllers/index/index-controller';
+import { aboutController } from '../controllers/about/about-controller';
+import { peopleRouter } from './people/people-route';
 
 const routes = (app: express.Express) => {
-    app.use('/', indexController);
+    app.use('/about', aboutController);
+    app.use('/people', peopleRouter);
 };
 
 export { routes };

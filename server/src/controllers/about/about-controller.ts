@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-export const indexController = async (req: Request, res: Response) => {
+export const aboutController = async (req: Request, res: Response) => {
     try {
         const projectTitle = 'Christmas 24';
         const authors = 'Artur Bomtempo e Eduarda Vieira';
