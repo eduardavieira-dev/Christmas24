@@ -9,7 +9,7 @@ import { verifyToken } from '../../middlewares/token-middleware';
 const peopleRouter = express.Router();
 
 peopleRouter.get('/', verifyToken, findAllPeopleController);
-peopleRouter.get('/search', verifyToken, findPersonByCodeController);
+peopleRouter.get('/search/:code', verifyToken, findPersonByCodeController);
 peopleRouter.post('/', verifyToken, createPersonController);
 peopleRouter.put('/:id', verifyToken, updatePersonController);
 peopleRouter.delete('/:id', verifyToken, deletePersonController);

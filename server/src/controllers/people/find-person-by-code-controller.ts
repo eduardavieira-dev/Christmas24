@@ -3,7 +3,7 @@ import { findPersonByCodeService } from '../../servlces/find-person-by-code-serv
 
 export const findPersonByCodeController = async (req: Request, res: Response) => {
     try {
-        const code = req.query.code as string | undefined;
+        const code = req.params.code as string | undefined;
 
         if (!code) {
             throw new Error('The "code" parameter was not supplied in the query.');
