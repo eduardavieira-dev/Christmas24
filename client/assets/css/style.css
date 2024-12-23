@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
 }
+
 :root {
     --header-height: 3rem;
 
@@ -37,6 +38,11 @@
     --z-fixed: 100;
 
     scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--first-color);
+    color: #fff;
 }
 
 @media screen and(min-width: 968px) {
@@ -184,7 +190,9 @@ img {
 }
 
 .show-menu {
-    top: calc(var(--header-height) + 1rem);
+    width: 100%;
+    border-radius: 10px;
+    top: 3rem;
 }
 
 .active-link {
@@ -335,6 +343,7 @@ h2 {
 }
 
 .natal__data {
+    height: 100%;
     text-align: center;
     padding: 1rem 1rem 2rem;
     background-color: var(--container-color);
@@ -660,6 +669,10 @@ h2 {
     .bd-container {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    header.bd-container {
+        border: 2px solid blue;
     }
 
     .home__img,
