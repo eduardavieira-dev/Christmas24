@@ -411,6 +411,17 @@ h2 {
     font-size: var(--normal-font-size);
 }
 
+span.desejos__category a,
+span.desejos__category a:link,
+span.desejos__category a:visited {
+    color: var(--text-color-light);
+}
+
+span.desejos__category a:hover {
+    transition: 0.5s ease all;
+    border-bottom: 1px solid var(--first-color);
+}
+
 .desejos__category {
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-1);
