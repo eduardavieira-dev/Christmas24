@@ -2,6 +2,8 @@
 
 This project was developed to deliver interactive Christmas messages. It integrates a chatbot and a website, designed to provide an engaging and personalized experience for each user.
 
+<img src="https://github.com/user-attachments/assets/1715e9dd-d59c-458c-90bf-45a4a39018fa" alt="Christmas website image" />
+
 ## 🔨 Project functionality
 
 The system includes a chatbot with a Christmas-themed quiz, where users must correctly answer 3 out of 5 questions to gain access to a personalized website.
